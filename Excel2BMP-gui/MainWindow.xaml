@@ -1,8 +1,15 @@
-﻿<Window x:Class="WpfTutorialSamples.XAML.EventsSample"
+﻿<Window x:Class="Excel2BMP.Dialogs.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="EventsSample" Height="300" Width="300">
-    <Grid Name="pnlMainGrid" MouseUp="pnlMainGrid_MouseUp" Background="LightBlue">
-
-    </Grid>
+        Title="Excel2BMP - Open MS Excel File..." Height="300" Width="475">
+    <DockPanel Margin="10">
+        <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center" DockPanel.Dock="Top" Margin="0,0,0,10">
+            <TextBlock Name="ProgramDescription" 
+                       Width="380">
+                Select Excel File. Warning: Tables must start from cell B2.
+            </TextBlock>
+            <Button x:Name="btnOpenFile" Click="btnOpenFile_Click" Content="Browse..." Width="60"/>
+        </WrapPanel>
+        <TextBox Name="txtEditor" />
+    </DockPanel>
 </Window>
